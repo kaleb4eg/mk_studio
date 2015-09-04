@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Architecture design
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    meta content='Site with examples of my architecture solutions' name='description'
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  body
+    .top
+    p class="notice" = notice
+    p class="alert" = alert
+    .container
+      = render 'header'
+      = yield
+    = render 'footer'
