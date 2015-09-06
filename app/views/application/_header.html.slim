@@ -1,0 +1,20 @@
+.pull-right
+  = link_to 'ukr'
+  | |
+  = link_to 'eng'
+= image_tag 'logo2.png', size: '114x114', class: 'logo_img center-block'
+
+nav.navbar
+  #navbar
+    ul.nav.navbar-nav
+      li= link_to 'Home', root_path
+      -# li.dropdown
+      -#   = link_to 'Projects', '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'aria-expanded' => 'true'
+      -#   ul.dropdown-menu.list-inline
+      -#     li= link_to 'First prj'
+      -#     li= link_to 'Second prj'
+      -#     li= link_to 'Third prj'
+      li= link_to 'Services'
+      li= link_to 'News'
+      li= link_to 'Press'
+      li= link_to 'Contact us'
