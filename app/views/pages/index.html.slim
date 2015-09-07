@@ -1,0 +1,24 @@
+p id="notice" = notice
+
+h1 Listing Pages
+
+table.table.table-striped
+  thead
+    tr
+      th Title
+      th Description
+      th Content
+      th Actions
+      th
+      th
+  tbody
+    - @pages.each do |page|
+      tr
+        td = page.title
+        td = page.description
+        td = page.content.truncate(40)
+        td = link_to 'Show', page, class: 'btn btn-default btn-xs'
+        td = link_to 'Edit', edit_page_path(page), class: 'btn btn-xs btn-primary'
+        td = link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger'
+
+= link_to 'New Page', new_page_path, class: 'btn btn-xs btn-primary'
