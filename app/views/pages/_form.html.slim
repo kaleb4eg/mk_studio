@@ -4,7 +4,10 @@
   .form-inputs
     = f.input :title
     = f.input :description
-    = f.input :content
+    = f.input :content, input_html: { class: 'tinymce' }
 
   form-actions
     = f.button :submit, class: 'btn-primary btn-sm'
+
+= tinymce_assets
+= tinymce
