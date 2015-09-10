@@ -1,0 +1,11 @@
+= simple_form_for([@page, @page_image], authenticity_token: true, remote: true) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :description
+    - if params[:action] == 'new'
+      = f.input :file
+
+  .form-actions
+    = f.button :submit, class: 'btn-primary btn-sm'

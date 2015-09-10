@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.0.5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -37,6 +37,10 @@ gem 'tinymce-rails-imageupload', '~> 4.0.16.beta'
 # User gems for Uploading and resizing files
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.2.7'
+# Use for uploading files through remote form
+gem 'remotipart', '~> 1.2'
+gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'jquery-ui-themes', '~> 0.0.11'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

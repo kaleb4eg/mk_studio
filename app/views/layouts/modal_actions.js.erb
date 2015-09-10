@@ -1,0 +1,7 @@
+$(function() {
+  if ($('#modal-actions').length === 0) {
+    $('.page-images').append("<%= j render '/layouts/modal_actions' %>")
+  };
+
+  <%= yield %>
+});

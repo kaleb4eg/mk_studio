@@ -1,0 +1,5 @@
+= content_tag_for :li, page_image, class: 'ui-state-default' do
+  span class='ui-icon ui-icon-arrowthick-2-n-s'
+  = page_image.title
+  = link_to 'Edit', edit_page_page_image_path(@page, page_image), remote: true, class: 'btn btn-primary pull-right btn-sm'
+  = link_to 'Delete', page_page_image_path(@page, page_image), method: :delete, remote: true, class: 'btn btn-danger pull-right btn-sm add-right-space'

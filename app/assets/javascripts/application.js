@@ -11,7 +11,15 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/sortable
 //= require jquery_ujs
+//= require jquery.remotipart
 //= require bootstrap
 //= require tinymce
+//= require show_message
 //= require_tree .
+
+$(function() {
+  $("#sortable").sortable();
+  $("#sortable").disableSelection();
+});

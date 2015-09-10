@@ -1,13 +1,25 @@
-= simple_form_for(@page) do |f|
-  = f.error_notification
+.panel.panel-default
+  .panel-body
+    = simple_form_for(@page) do |f|
+      = f.error_notification
 
-  .form-inputs
-    = f.input :title
-    = f.input :description
-    = f.input :content, input_html: { class: 'tinymce' }
+      .form-inputs
+        = f.input :title
+        = f.input :description
+        = f.input :content, input_html: { class: 'tinymce' }
 
-  form-actions
-    = f.button :submit, class: 'btn-primary btn-sm'
+      .form-actions
+        = f.button :submit, class: 'btn-primary btn-sm'
 
-= tinymce_assets
-= tinymce
+    = tinymce_assets
+    = tinymce
+
+.panel.panel-default
+  .panel-body
+    h4 Images
+    .page-images
+      ul id="sortable"
+        - if @page.page_images.present?
+          = render @page.page_images
+      br
+      = link_to 'Add image', new_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'
