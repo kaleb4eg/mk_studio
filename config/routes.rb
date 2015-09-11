@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :pages do
-    resources :page_images, except: [:index, :show]
+    resources :page_images, except: [:index, :show] do
+      post 'sort', on: :collection
+    end
   end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

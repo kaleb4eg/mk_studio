@@ -41,6 +41,7 @@ gem 'mini_magick', '~> 4.2.7'
 gem 'remotipart', '~> 1.2'
 gem 'jquery-ui-rails', '~> 5.0.5'
 gem 'jquery-ui-themes', '~> 0.0.11'
+gem 'acts_as_list', '~> 0.7.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -24,6 +24,11 @@ class PageImagesController < ApplicationController
     @page_image.destroy
   end
 
+  def sort
+    PageImage.find(params[:id]).insert_at(params[:position].to_i + 1)
+    render nothing: true
+  end
+
   private
 
   def find_page_image

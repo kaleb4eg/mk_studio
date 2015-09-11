@@ -20,6 +20,11 @@
 //= require_tree .
 
 $(function() {
-  $("#sortable").sortable();
+  $("#sortable").sortable({
+    axis: 'y',
+    update: function(event, ui) {
+      $.post($(this).data('update-url'), { id: ui.item.data('image-id'), position: ui.item.index() });
+    }
+  });
   $("#sortable").disableSelection();
 });
