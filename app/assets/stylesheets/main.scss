@@ -82,29 +82,34 @@ a:focus, a:hover {
 .social_area {
   list-style: outside none none;
   display: inline;
+  margin-bottom: 0px;
   li {
     margin-right: 5px;
     display: block;
   }
 }
-.facebook, .vk, .pinterest, .instagram {
-  background: image-url("social_icons.png");
+.facebook, .gplus, .pinterest, .instagram {
+  // background: image-url("social_icons.png");
+  background: image-url("social_icons1.png");
   display: block;
   text-indent: -9999px;
-  height: 15px;
-  width: 15px;
+  height: 30px;
+  width: 31px;
 }
-.vk {
-  background-position: -15px 0;
+.gplus {
+  background-position: -78px -39px;
 }
 .pinterest {
-  background-position: -30px 0;
+  background-position: -315px 0;
 }
 .instagram {
-  background-position: -45px 0;
+  background-position: -276px 0;
+}
+.facebook {
+  background-position: -39px 0;
 }
 
 .phone_area {
   list-style: outside none none;
-  margin-top: -5px;
+  margin-bottom: 0px;
 }
