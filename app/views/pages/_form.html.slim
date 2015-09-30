@@ -18,8 +18,10 @@
   .panel-body
     h4 Images
     .page-images
-      ul id="sortable" data-update-url="#{sort_page_page_images_url(@page)}"
-        - if @page.page_images.present?
+      - if @page.present?
+        ul id="sortable" data-update-url="#{sort_page_page_images_url(@page)}"
           = render @page.page_images
-      br
-      = link_to 'Add image', new_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'
+        br
+        = link_to 'Add image', new_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'
+      - else
+        | You will be able create images only after creating page.

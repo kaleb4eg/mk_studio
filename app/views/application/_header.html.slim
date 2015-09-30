@@ -1,7 +1,10 @@
 .pull-right
   = link_to 'ukr'
-  | |
+  = " | "
   = link_to 'eng'
+  - if signed_in?
+    = " | "
+    = link_to 'Log out', destroy_user_session_path, method: :delete
 = image_tag 'logo2.png', size: '104x104', class: 'logo_img center-block'
 
 nav.navbar

@@ -11,8 +11,10 @@ html
     .top
     .container
       = render 'header'
-      - if signed_in?
-        = link_to 'Log out', destroy_user_session_path, method: :delete
-        b
+      - if flash[:notice].present?
+        .alert.alert-success.alert-dismissible role="alert"
+          button.close type="button" data-dismiss="alert" aria-label="Close"
+            span aria-hidden="true" &times;
+          = flash[:notice]
       = yield
     = render 'footer'
