@@ -1,6 +1,5 @@
-class PagesController < ApplicationController
+class Admin::PagesController < Admin::AdminController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, except: :show
 
   def index
     @pages = Page.all
@@ -18,16 +17,16 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.new(page_params)
-    @page.save ? redirect_to(@page, notice: 'Page was successfully created.') : render(:new)
+    @page.save ? redirect_to(admin_page_url(@page), notice: 'Page was successfully created.') : render(:new)
   end
 
   def update
-    @page.update(page_params) ? redirect_to(@page, notice: 'Page was successfully updated.') : render(:edit)
+    @page.update(page_params) ? redirect_to(admin_page_url(@page), notice: 'Page was successfully updated.') : render(:edit)
   end
 
   def destroy
     @page.destroy
-    redirect_to(pages_url, notice: 'Page was successfully destroyed.')
+    redirect_to(admin_pages_url, notice: 'Page was successfully destroyed.')
   end
 
   private

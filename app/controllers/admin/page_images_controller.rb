@@ -1,4 +1,4 @@
-class PageImagesController < ApplicationController
+class Admin::PageImagesController < Admin::AdminController
   before_filter :find_page_image, only: [:edit, :update, :destroy]
   before_filter :set_page, only: [:new, :create, :edit, :update]
   layout 'modal_actions'

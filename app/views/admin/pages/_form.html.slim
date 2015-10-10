@@ -1,16 +1,13 @@
 .panel.panel-default
   .panel-body
-    = simple_form_for(@page) do |f|
+    = simple_form_for([:admin, @page]) do |f|
       = f.error_notification
-
       .form-inputs
         = f.input :title
         = f.input :description
         = f.input :content, input_html: { class: 'tinymce' }
-
       .form-actions
         = f.button :submit, class: 'btn-primary btn-sm'
-
     = tinymce_assets
     = tinymce
 
@@ -18,10 +15,10 @@
   .panel-body
     h4 Images
     .page-images
-      - if @page.present?
-        ul id="sortable" data-update-url="#{sort_page_page_images_url(@page)}"
+      - if @page.new_record?
+        | You will be able create images only after creating page.
+      - else
+        ul id="sortable" data-update-url="#{sort_admin_page_page_images_url(@page)}"
           = render @page.page_images
         br
-        = link_to 'Add image', new_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'
-      - else
-        | You will be able create images only after creating page.
+        = link_to 'Add image', new_admin_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'

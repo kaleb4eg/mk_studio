@@ -1,0 +1,13 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "jquery-ui/smoothness";
+@import "jquery-sortable";
+
+body {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.add-right-space {
+  margin-right: 10px;
+}

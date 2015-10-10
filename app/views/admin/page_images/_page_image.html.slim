@@ -1,0 +1,5 @@
+= content_tag_for :li, page_image, class: 'ui-state-default', data: { image_id: page_image.id } do
+  = image_tag page_image.file.thumb.url, class: 'add-right-space'
+  span = page_image.title
+  = link_to 'Edit', edit_admin_page_page_image_path(@page, page_image), remote: true, class: 'btn btn-primary pull-right btn-sm'
+  = link_to 'Delete', admin_page_page_image_path(@page, page_image), method: :delete, remote: true, class: 'btn btn-danger pull-right btn-sm add-right-space'

@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Admin area
+    = stylesheet_link_tag 'admin'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+    meta content='Site with examples of my architecture solutions' name='description'
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  body
+    .container
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle.collapsed aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button"
+              span class="sr-only" Toggle navigation
+              span class="icon-bar"
+              span class="icon-bar"
+              span class="icon-bar"
+            a href="#" class="navbar-brand" Admin panel
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li.active
+                = link_to 'Pages', admin_pages_path
+            ul.nav.navbar-nav.navbar-right
+              li
+                = link_to "You have logged in as #{current_user.email}"
+              - if signed_in?
+                li
+                  = link_to 'Log out', destroy_user_session_path, method: :delete
+      - if flash[:notice].present?
+        .alert.alert-success.alert-dismissible role="alert"
+          button.close type="button" data-dismiss="alert" aria-label="Close"
+            span aria-hidden="true" &times;
+          = flash[:notice]
+      = yield

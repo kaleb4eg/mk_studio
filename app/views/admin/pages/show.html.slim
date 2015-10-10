@@ -1,0 +1,7 @@
+p = @page.title
+p = @page.description
+p == @page.content
+
+- if signed_in?
+  = link_to 'Edit', edit_admin_page_path(@page), class: 'btn btn-primary btn-sm add-right-space'
+  = link_to 'Back', admin_pages_path, class: 'btn btn-default btn-sm'
