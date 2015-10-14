@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 admin = User.create(email: 'yevgen@gmail.com', password: '63XhafRvb')
+ActsAsTaggableOn::Tag.create(name: 'page')
+ActsAsTaggableOn::Tag.create(name: 'project')

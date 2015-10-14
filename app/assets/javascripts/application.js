@@ -17,14 +17,5 @@
 //= require bootstrap
 //= require tinymce
 //= require show_message
+//= require bootstrap-tags.min
 //= require_tree .
-
-$(function() {
-  $("#sortable").sortable({
-    axis: 'y',
-    update: function(event, ui) {
-      $.post($(this).data('update-url'), { id: ui.item.data('image-id'), position: ui.item.index() });
-    }
-  });
-  $("#sortable").disableSelection();
-});

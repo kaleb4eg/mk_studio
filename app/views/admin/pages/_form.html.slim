@@ -3,6 +3,11 @@
     = simple_form_for([:admin, @page]) do |f|
       = f.error_notification
       .form-inputs
+        #page-tag-list-container
+          = hidden_field_tag 'tags_list',
+                             @page.tag_list.join(', '),
+                             data: { all_tags: get_tags }
+        br
         = f.input :title
         = f.input :description
         = f.input :content, input_html: { class: 'tinymce' }
@@ -22,3 +27,9 @@
           = render @page.page_images
         br
         = link_to 'Add image', new_admin_page_page_image_path(@page), remote: true, class: 'btn-primary btn-sm'
+
+javascript:
+  $(function() {
+    initializers.bootstrapTags();
+    initializers.sortable();
+  });

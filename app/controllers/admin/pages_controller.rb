@@ -17,10 +17,12 @@ class Admin::PagesController < Admin::AdminController
 
   def create
     @page = Page.new(page_params)
+    @page.tag_list = params[:tags_list]
     @page.save ? redirect_to(admin_page_url(@page), notice: 'Page was successfully created.') : render(:new)
   end
 
   def update
+    @page.tag_list = params[:tags_list]
     @page.update(page_params) ? redirect_to(admin_page_url(@page), notice: 'Page was successfully updated.') : render(:edit)
   end
 
