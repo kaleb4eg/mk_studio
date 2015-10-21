@@ -1,0 +1,13 @@
+h4 = @project.title
+/ .row
+/   .col-xs-12
+/     - if @project.page_images.present?
+/       img.img-responsive src="#{@project.page_images.first.file.url(:medium)}"
+.row.add-bottom-space
+  - if @project.page_images.present?
+    - @project.page_images.each_with_index do |image, index|
+      / - if index > 1
+      .col-xs-4
+        img.img-responsive src="#{image.file.url(:medium)}"
+.row
+  == @project.content

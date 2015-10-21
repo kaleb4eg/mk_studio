@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  get 'projects' => 'home#projects', as: :projects
+  get 'project/:id' => 'home#project', as: :project
   post '/tinymce_assets' => 'tinymce_assets#create'
 
   namespace :admin do
