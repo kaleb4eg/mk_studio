@@ -9,7 +9,7 @@ APP_ROOT=/home/vitaliy/apps/design_app
 CURRENT=$APP_ROOT/mk_studio
 
 PID=$APP_ROOT/shared/pids/unicorn.pid
-CMD="$CURRENT/bin/unicorn -D -c $CURRENT/config/unicorn.rb -E production"
+CMD="/home/vitaliy/.rvm/bin/km_studio_unicorn -D -c $CURRENT/config/unicorn.rb -E production"
 action="$1"
 set -u
 
