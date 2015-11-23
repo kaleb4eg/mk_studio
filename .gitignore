@@ -21,3 +21,6 @@
 
 public/assets/*
 public/uploads/*
+
+# Ignore secrets configuration
+config/secrets.yml
