@@ -11,3 +11,5 @@ ActsAsTaggableOn::Tag.create(name: 'page')
 ActsAsTaggableOn::Tag.create(name: 'project commercial')
 ActsAsTaggableOn::Tag.create(name: 'project privat')
 ActsAsTaggableOn::Tag.create(name: 'project finished')
+
+Page.create(title: 'Home page', description: 'This is home page', content: 'change me!!!!!!!')

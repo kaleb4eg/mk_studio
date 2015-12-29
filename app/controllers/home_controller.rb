@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @page = Page.first
+    @page = Page.where(title: 'Home page').first
   end
 
   def project
