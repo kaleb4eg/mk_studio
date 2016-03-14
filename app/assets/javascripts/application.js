@@ -15,7 +15,7 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap
-//= require tinymce
+
 //= require show_message
 //= require bootstrap-tags.min
 //= require_tree .
