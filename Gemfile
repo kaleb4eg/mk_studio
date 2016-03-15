@@ -30,7 +30,7 @@ gem 'pg', '~> 0.18.2'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'slim', '~> 3.0.3'
 gem 'simple_form', '~> 3.1.1'
-gem 'rich', :git => 'https://github.com/kreativgebiet/rich.git'
+gem 'ckeditor', '~> 4.1', '>= 4.1.6'
 # User gems for Uploading and resizing files
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.2.7'
