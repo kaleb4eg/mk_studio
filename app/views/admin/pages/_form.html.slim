@@ -4,9 +4,9 @@
       = f.error_notification
       .form-inputs
         #page-tag-list-container
-          = hidden_field_tag 'tags_list',
-                             @page.tag_list.join(', '),
-                             data: { all_tags: get_tags }
+          = hidden_field_tag 'tags_list', @page.tag_list.join(', '), data: { all_tags: get_tags }
+        br
+        = f.hidden_field :page_type
         br
         = f.input :title
         = f.input :description

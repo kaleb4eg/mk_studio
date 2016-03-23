@@ -1,5 +1,5 @@
-h1 New Page
+h1 = "New #{@page.page_type}"
 
 = render 'form'
 br
-= link_to 'Back', admin_pages_path, class: 'btn btn-default btn-sm'
+= link_to 'Back', admin_pages_path(page_type: @page.page_type), class: 'btn btn-default btn-sm'

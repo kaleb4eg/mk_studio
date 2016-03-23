@@ -31,7 +31,6 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'slim', '~> 3.0.3'
 gem 'simple_form', '~> 3.1.1'
 gem 'ckeditor', '~> 4.1', '>= 4.1.6'
-# User gems for Uploading and resizing files
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.2.7'
 # Use for uploading files through remote form

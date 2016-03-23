@@ -22,6 +22,8 @@ html
             ul.nav.navbar-nav
               li.active
                 = link_to 'Pages', admin_pages_path
+              li
+                = link_to 'Projects', admin_pages_path(page_type: 'project')
             ul.nav.navbar-nav.navbar-right
               li
                 = link_to "You have logged in as #{current_user.email}"

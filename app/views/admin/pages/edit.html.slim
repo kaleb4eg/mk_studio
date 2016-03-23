@@ -1,6 +1,5 @@
-h1 Editing Page
-
+h1 = "Editing #{@page.page_type}"
 = render 'form'
 br
 = link_to 'Show', admin_page_path(@page), class: 'btn btn-info btn-sm add-right-space'
-= link_to 'Back', admin_pages_path, class: 'btn btn-default btn-sm'
+= link_to 'Back', admin_pages_path(page_type: @page.page_type), class: 'btn btn-default btn-sm'
