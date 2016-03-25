@@ -1,7 +1,7 @@
 .pull-right
-  = link_to 'ukr'
-  = " | "
-  = link_to 'eng'
+  = link_to 'eng', locale: 'en'
+  = "  |  "
+  = link_to 'укр', locale: 'ua'
   - if signed_in?
     = " | "
     = link_to 'Log out', destroy_user_session_path, method: :delete

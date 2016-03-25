@@ -19,7 +19,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+ua:
   footer:
-    folow_us: "Folow us:"
-    contact_us: "Contact us:"
+    folow_us: "Ми на:"
+    contact_us: "Контакти:"

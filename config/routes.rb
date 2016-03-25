@@ -1,19 +1,21 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
-  devise_for :users
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+    devise_for :users
+    # The priority is based upon order of creation: first created -> highest priority.
+    # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'home#index'
-  get 'projects' => 'home#projects', as: :projects
-  get 'project/:id' => 'home#project', as: :project
+    # You can have the root of your site routed with "root"
+    root 'home#index'
+    get 'projects' => 'home#projects', as: :projects
+    get 'project/:id' => 'home#project', as: :project
 
-  namespace :admin do
-    get '/' => 'pages#index'
-    resources :pages do
-      resources :page_images, except: [:index, :show] do
-        post 'sort', on: :collection
+    namespace :admin do
+      get '/' => 'pages#index'
+      resources :pages do
+        resources :page_images, except: [:index, :show] do
+          post 'sort', on: :collection
+        end
       end
     end
   end
