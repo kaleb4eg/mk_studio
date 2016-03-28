@@ -8,7 +8,7 @@ class HomeController < ApplicationController
   end
 
   def projects
-    @commercial_projects = Page.tagged_with('project commercial')
+    @commercial_projects = Page.tagged_with('project commercial').includes(:page_images)
     @privat_projects = Page.tagged_with('project privat')
     @finished_projects = Page.tagged_with('project finished')
   end

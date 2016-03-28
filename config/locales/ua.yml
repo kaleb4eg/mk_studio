@@ -20,6 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ua:
+  header:
+    about_us: "Про нас"
+    services: "Послуги"
+    projects: "Проекти"
+    news: "Новини"
+    publications: "Публiкацiї"
+    contacts: "Контакти"
   footer:
     folow_us: "Ми на:"
     contact_us: "Контакти:"
+  home:
+    projects:
+      title: "Проекти"
+      commercial: "Комерційні проекти"
+      privat: "Приватні проекти"
+      finished: "Реалізовані проекти"

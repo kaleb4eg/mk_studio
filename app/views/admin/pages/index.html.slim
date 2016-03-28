@@ -19,4 +19,4 @@ table.table.table-striped
         td = link_to 'Edit', edit_admin_page_path(page), class: 'btn btn-xs btn-primary'
         td = link_to 'Destroy', admin_page_path(page), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger'
 
-= link_to 'New Page', new_admin_page_path(page_type: @page_type), class: 'btn btn-xs btn-primary'
+= link_to "New #{@page_type}", new_admin_page_path(page_type: @page_type), class: 'btn btn-xs btn-primary'

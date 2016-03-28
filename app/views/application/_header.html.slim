@@ -10,15 +10,15 @@
 nav.navbar
   #navbar
     ul.nav.navbar-nav
-      li= link_to 'Про нас', root_path
+      li= link_to t('header.about_us'), root_path
       -# li.dropdown
       -#   = link_to 'Projects', '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'aria-expanded' => 'true'
       -#   ul.dropdown-menu.list-inline
       -#     li= link_to 'First prj'
       -#     li= link_to 'Second prj'
       -#     li= link_to 'Third prj'
-      li= link_to 'Послуги'
-      li= link_to 'Проекти', projects_path
-      li= link_to 'Новини'
-      li= link_to 'Публікації'
-      li= link_to 'Контакти'
+      li= link_to t('header.services')
+      li= link_to t('header.projects'), projects_path
+      li= link_to t('header.news')
+      li= link_to t('header.publications')
+      li= link_to t('header.contacts')
