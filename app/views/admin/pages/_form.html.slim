@@ -7,7 +7,9 @@
           = hidden_field_tag 'tags_list', @page.tag_list.join(', '), data: { all_tags: get_tags }
         br
         = f.hidden_field :page_type
-        br
+        p
+          - I18n.available_locales.each do |locale|
+            = link_to locale, { locale: locale }, { class: "btn btn-default btn-sm #{ 'active' if I18n.locale == locale } add-right-space", role: 'button' }
         = f.input :title
         = f.input :description
         = f.input :content, as: :ckeditor
