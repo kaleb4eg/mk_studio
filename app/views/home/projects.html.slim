@@ -2,15 +2,24 @@ h3 = t('.title')
 
 .row.add-bottom-space
   .col-xs-12
-    h4 = t('.commercial')
-  == show_projects(@commercial_projects)
+    = link_to(t('.commercial'), projects_path(project_type: 'commercial'), class: "project-type #{'active' if params['project_type'] == 'commercial'}")
+    = link_to(t('.privat'), projects_path(project_type: 'private'), class: "project-type #{'active' if params['project_type'] == 'private'}")
+    = link_to(t('.finished'), projects_path(project_type: 'finished'), class: "project-type #{'active' if params['project_type'] == 'finished'}")
 
 .row.add-bottom-space
-  .col-xs-12
-    h4 = t('.privat')
-  == show_projects(@privat_projects)
+  == show_projects(@projects)
 
-.row
-  .col-xs-12
-    h4 = t('.finished')
-  == show_projects(@finished_projects)
+/ .row.add-bottom-space
+/   .col-xs-12
+/     h4 = t('.commercial')
+/   == show_projects(@commercial_projects)
+
+/ .row.add-bottom-space
+/   .col-xs-12
+/     h4 = t('.privat')
+/   == show_projects(@privat_projects)
+
+/ .row
+/   .col-xs-12
+/     h4 = t('.finished')
+/   == show_projects(@finished_projects)
