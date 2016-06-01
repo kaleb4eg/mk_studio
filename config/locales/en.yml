@@ -36,3 +36,5 @@ en:
       commercial: "Commercial projects"
       privat: "Privat projects"
       finished: "Finished projects"
+  project:
+      text: "There is no image."

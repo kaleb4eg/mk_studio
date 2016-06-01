@@ -138,3 +138,25 @@ a:focus, a:hover {
     text-decoration: none;
   }
 }
+
+// Project page
+.project-img {
+  @media (min-width: $screen-xs-min) { height: 300px; }
+  @media (min-width: $screen-sm-min) { height: 240px; }
+  @media (min-width: $screen-md-min) { height: 200px; }
+  @media (min-width: $screen-lg-min) { height: 180px; }
+  text-align: center;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+  span.project-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+// 169 189 225 452
