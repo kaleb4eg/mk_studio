@@ -18,4 +18,22 @@
 //= require ckeditor/init
 //= require show_message
 //= require bootstrap-tags.min
+//= require jquery.magnific-popup.min
 //= require_tree .
+
+$(document).ready(function() {
+  $('.test-popup-link').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom',
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+});

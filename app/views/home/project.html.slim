@@ -9,6 +9,8 @@ h4 = @project.title
       / - if index > 1
       .project-img.add-bottom-space.col-xs-12.col-sm-6.col-md-4.col-lg-3
         span.project-helper
-        img src="#{image.file.url(:medium)}"
+        a.test-popup-link href="#{image.file.url(:medium)}"
+          img src="#{image.file.url(:medium)}"
 .row
-  == @project.content
+  .col-xs-12
+    == @project.content
