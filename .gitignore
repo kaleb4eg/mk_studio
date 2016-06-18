@@ -24,3 +24,6 @@ public/uploads/*
 
 # Ignore secrets configuration
 config/secrets.yml
+
+# Ignore deploy project
+/deploy
