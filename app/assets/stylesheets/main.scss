@@ -43,25 +43,33 @@ a:focus, a:hover {
   min-height: 20px;
   background-color: #242424;
 }
+
+.languages {
+  a:focus, a:hover {
+    color: #ffffff;
+  }
+}
+
 .logo_img {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
 .navbar {
-  background-color: #e4e4e4;
-  border-top: 2px solid #a0a0a0;
+  border-bottom: 2px solid #a0a0a0;
   border-radius: 0px;
-  min-height: 30px;
+  min-height: 25px;
   padding-top: 3px;
-}
-.navbar-nav li {
-  a {
-    padding-bottom: 0px;
-    padding-top: 0px;
-  }
-  a:focus, a:hover {
-    background-color: #e4e4e4;
-    color: #333131;
+
+  .navbar-nav li {
+    a {
+      padding-bottom: 0px;
+      padding-top: 0px;
+      font-weight: bold;
+    }
+    a:focus, a:hover {
+      background-color: #ffffff;
+    }
   }
 }
 
@@ -194,4 +202,16 @@ a:focus, a:hover {
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
+}
+
+.carousel-indicators {
+  li {
+    margin: 0 5px;
+  }
+
+  .active {
+    margin: 0 5px;
+    height: 10px;
+    width: 10px;
+  }
 }

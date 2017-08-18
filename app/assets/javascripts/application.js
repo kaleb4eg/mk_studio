@@ -28,6 +28,9 @@ $(document).ready(function() {
     closeBtnInside: false,
     fixedContentPos: true,
     mainClass: 'mfp-no-margins mfp-with-zoom',
+    gallery: {
+      enabled: true
+    },
     image: {
       verticalFit: true
     },
