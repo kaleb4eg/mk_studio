@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @page = Page.where(page_title: params[:page_title]).first
+    @page = Page.send(params[:page_title]).last
   end
 
   def project
@@ -22,13 +22,5 @@ class HomeController < ApplicationController
     end
 
     @projects
-  end
-
-  def services
-
-  end
-
-  def contacts
-
   end
 end
